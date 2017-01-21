@@ -16,7 +16,9 @@
 title: Ryan Jones
 email: 
 description: > # this means to ignore newlines until "baseurl:"
-  Personal site for a developer in training
+  Hi!  My name is Ryan and some call me Ryjo.  I'm a former rower and current software engineer living in Boston with interests in music, learning, sensory perception and cognition, photography, sports, and games.  Musically, I have a special affinity for experimental/psych indie music and early 20th century classical. I sometimes drink Soylent.
+  
+  I currently work at Ingenico Mobile Solutions building payment solutions.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: TheRyjo

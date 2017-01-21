@@ -1,5 +1,5 @@
 ---
-layout: default_custom
+layout: default
 ---
 [Home]({{ site.baseurl }}{% link index.md %})
 <code>&nbsp;</code>
@@ -13,13 +13,7 @@ layout: default_custom
 <code>&nbsp;</code>
 [About]({{ site.baseurl }}{% link about.md %})
 
-![Me]({{ site.baseurl }}{% link me.jpg %})
+Single Page
+===========
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
+[Power Of 2]({{ site.baseurl }}{% link /assets/spa/experiments/power-of-2-memorization/index.html %})

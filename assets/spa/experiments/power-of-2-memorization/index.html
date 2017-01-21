@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Power of 2 Memorization</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="container">
+  <div class="">
+    <span id="result"></span>
+    <span id="equals"> = </span>
+    <span id="base"></span>
+    <span id="exponent-sign">^</span>
+    
+    <input id="exponent-answer" type="number"
+           maxLength="2"
+           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+           autofocus>
+  </div>
+
+  <div class="correction-group">
+    <div class="checkmark"></div>
+    <div class="correction">9</div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
