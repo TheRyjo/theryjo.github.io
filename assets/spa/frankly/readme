@@ -1,0 +1,19 @@
+
+Steps notes:
+
+-View source text prompt
+-Input source text
+-Go next
+
+-View readonly source text alongside summary/notes prompt
+-Input summary/notes
+-Go next
+
+-View readonly summary/notes alongside rewrite prompt
+-Input rewrite
+-Go next
+
+-View rewrite alongside original source
+
+
+[blank,source input, source readonly, notes input, notes readonly, rewrite input, rewrite readonly]

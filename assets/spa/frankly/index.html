@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Frankly</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="app.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+</head>
+
+<body>
+  <div class="flexbox-container">
+    <div id="left-pane" class="flexbox-item" style="background-color: tomato">
+    </div>
+
+    <div id="right-pane" class="flexbox-item" style="background-color: skyblue">
+    </div>
+  </div>
+
+  <script id="blank-template" type="text/x-handlebars-template">
+  </script>
+
+  <script id="source-template" type="text/x-handlebars-template">
+    <h2>Source Text</h2>
+
+    {{#if edit}}
+      <div id="paragraph_text" style="height:80%">
+        <textarea>{{text}}</textarea>
+      </div>
+    {{else}}
+      <p>{{text}}</p>
+    {{/if}}
+  </script>
+
+  <script id="notes-template" type="text/x-handlebars-template">
+    <h2>Summary Notes</h2>
+ 
+    <div style="height:90%">
+      {{#if edit}}
+        <input class="notes-input" maxlength="60"></input>
+      {{/if}}
+      <ul id="notes">
+        {{#each notes}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </script>
+
+  <script id="rewrite-template" type="text/x-handlebars-template">
+    <h2>Rewrite</h2>
+
+    <div style="height:10px"></div>
+    <div id="rewrite-text" style="height:80%">
+      {{#if edit}}
+        <textarea>{{text}}</textarea>
+      {{else}}
+        <p>{{text}}</p>
+      {{/if}}
+    </div>
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>

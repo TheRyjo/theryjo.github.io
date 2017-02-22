@@ -1,16 +1,28 @@
+var ENTER_KEY = 13;
+
 start();
+var isActive = true;
+var isShowingAnswer = false;
 
 function start() {
   hideChecker();
   populateNext();
   
-  $("#exponent-answer").keypress(function (e) { checkAndProceed(e); });
+  $("#exponent-answer").keypress(function (e) {
+    if (isActive) {
+      if (isShowingAnswer && e.which == ENTER_KEY) {
+        reset();
+      }
+      else {
+        checkAndProceed(e);
+      }    
+    }
+  });
   
   setInterval(function(){ $("#exponent-answer").focus() }, 1000);
 }
 
 function checkAndProceed(e) {
-  var ENTER_KEY = 13;
   var hasAnswer = $("#exponent-answer").val() !== "";
 
   var key = e.which;
@@ -31,16 +43,28 @@ function checkAnswer() {
   console.log("answer = " + Math.pow(2, answer));
   
   var isCorrect = Math.pow(2, answer) === correct;
+  
   showChecker(isCorrect);
+  isShowingAnswer = true;
   
   var shortTime = 1500;
   var longTime = 3000;
   var timeout = isCorrect ? shortTime : longTime;
+  isActive = isCorrect;
+  
   setTimeout(function() {
-    hideChecker();
-    clearAnswer();
-    populateNext();
+    if (isShowingAnswer) {
+      reset();
+    }
   }, timeout);
+}
+
+function reset() {
+  hideChecker();
+  clearAnswer();
+  populateNext();
+  isActive = true;
+  isShowingAnswer = false;
 }
 
 function hideChecker() {

@@ -1,0 +1,31 @@
+.flexbox-container {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+  height: 95vh;
+  text-align: center;
+}
+
+.flexbox-item {
+	flex: 1;
+}
+
+textarea {
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 90%;
+  height: 90%;
+  font-size: 16px;
+}
+
+.notes-input {
+  width: 85%;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
