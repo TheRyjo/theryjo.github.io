@@ -1,122 +1,149 @@
-$(document).ready(function(){
-  var blankHtml = $("#blank-template").html();
-  var sourceHtml = $("#source-template").html();
-  var notesHtml = $("#notes-template").html();
-  var rewriteHtml = $("#rewrite-template").html();
-
-  var blankTemplate = Handlebars.compile(blankHtml);
-  var sourceTemplate = Handlebars.compile(sourceHtml);
-  var notesTemplate = Handlebars.compile(notesHtml);
-  var rewriteTemplate = Handlebars.compile(rewriteHtml);
-
-  templates = [
-    blankTemplate,
-    sourceTemplate,
-    notesTemplate,
-    rewriteTemplate
-  ];
-
+$(document).ready(function(){  
   var model = {
-    source: "It was November. `Although it was not yet late, the sky was dark when I turned into Laundress Passage. Father had finished for the day, switched off the shop lights and closed the shutters; but so I would not come home to darkness he had left on the light over the stairs to the flat. Through the glass in the door it cast a foolscap rectangle of paleness onto the wet pavement, and it was while I was standing in that rectangle, about to turn my key in the door, that I first saw the letter. Another white rectangle, it was on the fifth step from the bottom, where I couldn't miss it.",
+    source: "Long has the Press groaned in bringing forth an hateful, but numerous Brood of Party Pamphlets, malicious Scribbles, and Billingsgate Ribaldry. The Rancour and bitterness it has unhappily infused into Mens minds, and to what a Degree it has sowred and leaven’d the Tempers of Persons formerly esteemed some of the most sweet and affable, is too well known here, to need any further Proof or Representation of the Matter.",
     notes: [],
     rewrite: ""
   };
-  
+
   stageIdx = 0;
-  stages = [
-    [0,1],
-    [1,2],
-    [2,3],
-    [3,1]
-  ];
-  stageContexts = [
-    [{}, {edit:true, text:model.source}],
-    [{edit:false, text:model.source}, {edit:true}],
-    [{edit:false, notes:model.notes}, {edit:true, text:model.rewrite}],
-    [{edit:false, text:model.rewrite}, {edit:false, text:model.source}]
-  ];
-  function updateContexts(model) {
-    stageContexts = [
-      [{}, {edit:true, text:model.source}],
-      [{edit:false, text:model.source}, {edit:true}],
-      [{edit:false, notes:model.notes}, {edit:true, text:model.rewrite}],
-      [{edit:false, text:model.rewrite}, {edit:false, text:model.source}]
-    ];
+  stages = initFlow(model);
+  loadStage(model, stageIdx);
+
+  registerNavigationHandlers(model);
+});
+
+$( "#help" ).click(function () {
+  if ( $( "#help-content" ).is( ":hidden" ) ) {
+    $( "#help-content" ).slideDown( "slow" );
+    setTimeout(function() {$( "#help-content" ).hide();}, 4000);
+  } else {
+    $( "#help-content" ).hide();
   }
+});
 
-  function advanceStage(increment) {
-    if (increment === undefined) {
-      increment = 1;
-    }
+function registerNavigationHandlers(model) {
+    $(document).keydown(function(e){
+    var leftArrow = 37;
+    var rightArrow = 39;
 
-    // pull text from edited
-    if (stageIdx === 0) {
-      model.source = $("div#paragraph_text textarea")[0].value;
-    }
-    else if (stageIdx === 1) {
-      // pull notes li from ...
-      $notes = $("ul#notes li");
-      for (var i=0; i<$notes.length; i++) {
-        model.notes[i] = $notes[i].textContent;
-      }
-    }
-    else if (stageIdx === 2) {
-      // pull rewrite text from ...
-      $rewrite = $("div#rewrite-text textarea")[0];
-      model.rewrite = $rewrite.value;
-    }
-    updateContexts(model);
-
-    stageIdx += increment;
-    if (stageIdx >= stages.length) stageIdx = stages.length - 1;
-    if (stageIdx <= 0) stageIdx = 0;
-
-    var l = stages[stageIdx][0];
-    var r = stages[stageIdx][1];
-    loadTemplates(l,r);
-
-    if (stageIdx === 1) {
-      $("input.notes-input").keydown(function(e){
-        if (e.keyCode == 13) {
-          $input = $("input.notes-input");
-          if ($input.val() != ""){
-            $("#notes").append("<li>" + $input.val() + "</li>");
-            $input.val("");
-          }
-        }
-      });
-    }
-    else if (stageIdx === 2) {
-      // pull rewrite text from ...
-      $rewrite = $("div#rewrite-text textarea")[0];
-      model.rewrite = $rewrite.textContent;
-    }
-  }
-
-  var leftArrow = 37;
-  var rightArrow = 39;
-
-  var l = 0;
-  var r = 1;
-  loadTemplates(l,r);
-
-  function loadTemplates(leftIdx, rightIdx){
-    var leftTemplate = templates[leftIdx];
-    var rightTemplate = templates[rightIdx];
-    var leftContext = stageContexts[stageIdx][0];
-    var rightContext = stageContexts[stageIdx][1];
-
-    $("div#left-pane").html(leftTemplate(leftContext));
-    $("div#right-pane").html(rightTemplate(rightContext));
-  }
-
-  var numTemplates = templates.length;
-  $(document).keydown(function(e){
     if (e.keyCode == rightArrow) {
-      advanceStage(1);
+      advanceStage(model, 1);
     }
     else if (e.keyCode == leftArrow) {
-      advanceStage(-1);
+      advanceStage(model, -1);
     }
   });
-})
+};
+
+function initFlow(model) {
+  // Create first step
+  var blank   = new TemplatedStep("#blank-template");
+
+  // Create second step
+  var sourceSaveFunc = function(model) {
+    model.source = $("div#paragraph_text textarea")[0].value;
+  };
+  var source  = new TemplatedStep("#source-template", sourceSaveFunc);
+
+  // Create third step
+  var notesSaveFunc = function(model) {
+    $notes = $("ul#notes li");
+    for (var i=0; i<$notes.length; i++) {
+      model.notes[i] = $notes[i].textContent;
+    }
+  };
+  var notesPrepareFunc = function() {
+    $("input.notes-input").keydown(function(e){
+      if (e.keyCode == 13) {
+        $input = $("input.notes-input");
+        if ($input.val() != ""){
+          $("#notes").append("<li>" + $input.val() + "</li>");
+          $input.val("");
+        }
+      }
+    });
+  };
+  var notes   = new TemplatedStep("#notes-template", notesSaveFunc, notesPrepareFunc);
+
+  // Create fourth step
+  var rewriteFunc = function (model) { model.rewrite = $("div#rewrite-text textarea")[0].value; };
+  var rewrite = new TemplatedStep("#rewrite-template", rewriteFunc);
+
+  // Return flow as step pairs
+  return [
+    [blank, source],
+    [source, notes],
+    [notes, rewrite],
+    [source, rewrite]
+  ];
+}
+
+function TemplatedStep (templateSelector, saveFunc, prepareFunc) {
+  this.template = Handlebars.compile($(templateSelector).html());
+  this.saveFunc = saveFunc;
+  this.prepareFunc = prepareFunc;
+
+  this.save = function(model) {
+    if (this.saveFunc)
+      this.saveFunc(model);
+  };
+
+  this.prepare = function() {
+    if (this.prepareFunc)
+      this.prepareFunc();
+  };
+
+  this.render = function(model, isEdit) {
+    return this.template({
+      edit: !!isEdit,
+      model: model
+    });
+  };
+}
+
+function advanceStage(model, increment) {
+  if (increment === undefined) {
+    increment = 1;
+  }
+
+  // If not last stage
+  if (stageIdx != 3) {
+    var rightStep = stages[stageIdx][1]
+    rightStep.save(model);
+  }
+
+  stageIdx += increment;
+  if (stageIdx >= stages.length) stageIdx = stages.length - 1;
+  if (stageIdx <= 0) stageIdx = 0;
+
+  loadStage(model, stageIdx);
+
+  var rightStep = stages[stageIdx][1]
+  rightStep.prepare();
+}
+
+function loadStage(model, stageIndex) {
+  var st = stages[stageIndex];
+  var left = st[0];
+  var right = st[1];
+  var readonly = stageIndex > 2;
+
+  loadSteps(model, left, right, readonly);
+}
+
+function loadSteps(model, leftStep, rightStep, readonly) {
+  if (readonly === undefined) {
+    readonly = false;
+  }
+
+  var editable = true;
+  if (!readonly) {
+    $("div#left-pane").html( leftStep.render(model, !editable) );
+    $("div#right-pane").html( rightStep.render(model, editable) );
+  }
+  else {
+    $("div#left-pane").html( leftStep.render(model, !editable) );
+    $("div#right-pane").html( rightStep.render(model, !editable) );
+  }
+}
+

@@ -1,3 +1,8 @@
+NOTES
+
+
+
+
 
 Steps notes:
 
@@ -17,3 +22,57 @@ Steps notes:
 
 
 [blank,source input, source readonly, notes input, notes readonly, rewrite input, rewrite readonly]
+
+
+
+
+step {
+	template,
+	template context,
+	model load logic,
+	model save logic
+}
+
+function SourceStep (model) {
+	this.model = model;
+	this.template = Handlebars.compile($("#source-template").html();
+
+	this.render = function(editMode) {
+		return template({
+			edit: (editMode === true),
+			text: this.model.source
+		});
+	}
+}
+
+
+
+
+
+
+
+
+Frankly
+*input template ID only to step constructor,
+Xpair is-readonly value with stage pair (i.e. wrap all stage state in declared stage configuration)
+-add simple sample loading, value storage
+-textareas/input on-change update model to avoid pulling from el.
+-For notes, use focus() as prepare after re-render as workaround for losing focus, update triggers for go to next step etc.
+-Extend to different rewrite sizes.  Sentence, Paragraph, Article
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
