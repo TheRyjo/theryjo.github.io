@@ -28,7 +28,6 @@ photos:
 - that-one
 - trinity
 - untitled
-- vintage-fixed
 - white-hot
 ---
 [Home]({{ site.baseurl }}{% link index.md %})
