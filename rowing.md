@@ -9,19 +9,8 @@ custom_js:
 - featherlight-1.7.0/featherlight.gallery.min
 ---
 [Home]({{ site.baseurl }}{% link index.md %})
-<code>&nbsp;</code>
-[Posts]({{ site.baseurl }}{% link blank.md %})
-<code>&nbsp;</code>
-[Sandbox]({{ site.baseurl }}{% link sandbox.md %})
-<code>&nbsp;</code>
-[Photos]({{ site.baseurl }}{% link photos.md %})
-<code>&nbsp;</code>
-[Rowing]({{ site.baseurl }}{% link rowing.md %})
-<code>&nbsp;</code>
-[About]({{ site.baseurl }}{% link about.md %})
 
-I started rowing in highschool and continued through college.
-Here are some photos.
+I started rowing in my freshman year of highschool. I continued in college, competing on the freshman and varsity squads.
 
 Columbia
 ====================

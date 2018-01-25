@@ -11,7 +11,6 @@ custom_js:
 photos:
 - a-cityscape
 - austin
-- black-lashes-1
 - black-lashes-2
 - bloom
 - boats
@@ -31,18 +30,8 @@ photos:
 - white-hot
 ---
 [Home]({{ site.baseurl }}{% link index.md %})
-<code>&nbsp;</code>
-[Posts]({{ site.baseurl }}{% link blank.md %})
-<code>&nbsp;</code>
-[Sandbox]({{ site.baseurl }}{% link sandbox.md %})
-<code>&nbsp;</code>
-[Photos]({{ site.baseurl }}{% link photos.md %})
-<code>&nbsp;</code>
-[Rowing]({{ site.baseurl }}{% link rowing.md %})
-<code>&nbsp;</code>
-[About]({{ site.baseurl }}{% link about.md %})
 
-Here are some photos I took.
+Here are some of my photos.
 
 <section
   data-featherlight-gallery

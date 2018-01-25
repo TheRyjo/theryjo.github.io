@@ -1,4 +1,4 @@
 ---
 layout: default
-title:  "Test2"
+title:  "Test Post 1"
 ---
