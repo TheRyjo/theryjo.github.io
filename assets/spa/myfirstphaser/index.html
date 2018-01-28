@@ -1,0 +1,158 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>Phaser - Making your first game, part 1</title>
+    <script src="//cdn.jsdelivr.net/phaser/2.2.2/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(500, 500, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var player, stars, platforms, cursors, score, scoreText;
+
+function preload() {
+  game.load.image('sky', 'assets/sky.png');
+  game.load.image('ground', 'assets/platform.png');
+  game.load.image('star', 'assets/star.png');
+  game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+}
+
+function create() {
+  // Enable the Arcade Physics System
+  game.physics.startSystem(Phaser.Physics.ARCADE);
+
+  addSky();
+  addGround();
+  addPlayer();
+  addKeys();
+  addStars();
+  addScore();
+}
+
+function update() {
+  // Collide the player with the platforms
+  var hitPlatform = game.physics.arcade.collide(player, platforms);
+  
+  // Collide the stars with the platforms
+  game.physics.arcade.collide(stars, platforms);
+
+  // Check player stars overlap
+  game.physics.arcade.overlap(player, stars, collectStar, null, this);
+
+  // Reset the player's velocity
+  player.body.velocity.x = 0;
+
+  if (cursors.left.isDown) {
+    // Move to the left
+    player.body.velocity.x = -250;
+    player.animations.play('left');
+  }
+  else if (cursors.right.isDown) {
+    // Move to the rigth
+    player.body.velocity.x = 250;
+    player.animations.play('right');
+  }
+  else {
+    // Stand still
+    player.animations.stop();
+    player.frame = 4;
+  }
+
+  // Allow the player to jump if they are touching the ground.
+  if (cursors.up.isDown && player.body.touching.down && hitPlatform) {
+    player.body.velocity.y = -1000;
+  }
+}
+
+function addSky() {
+  // A simple background
+  game.add.sprite(0, 0, 'sky');
+}
+
+function addGround() {
+  // The platforms group contains the ground and the 2 ledges we can jump on
+  platforms = game.add.group();
+
+  // Enable physics for objects added to this group
+  platforms.enableBody = true;
+
+  // Create the ground
+  var ground = platforms.create(0, game.world.height - 64, 'ground');
+
+  // Scale ground to fit width of game
+  ground.scale.setTo(2, 2);
+
+  // Stop ground from falling away when jumped on
+  ground.body.immovable = true;
+
+  // Create ledges
+  var ledge = platforms.create(350, 300, 'ground');
+  ledge.body.immovable = true;
+  
+  ledge = platforms.create(-200, 150, 'ground');
+  ledge.body.immovable = true;
+}
+
+function addPlayer() {
+  // The player and settings
+  player = game.add.sprite(32, game.world.height - 150, 'dude');
+
+  // Enable player physics
+  game.physics.arcade.enable(player);
+
+  // Player physics properties
+  //player.body.bounce.y = 0.2;
+  player.body.gravity.y = 2000;
+  player.body.collideWorldBounds = true;
+
+  // Our two walking animations
+  player.animations.add('left', [0, 1, 2, 3], 10, true);
+  player.animations.add('right', [5, 6, 7, 8], 10, true);
+}
+
+function addKeys() {
+  cursors = game.input.keyboard.createCursorKeys();
+}
+
+function addStars() {
+  stars = game.add.group();
+  stars.enableBody = true;
+
+  // Create some evenly space stars
+  for (var i = 0; i < 7; i++) {
+    // Create a star in group
+    var star = stars.create(i * 70, 0, 'star');
+
+    // Leg gravity work on stars
+    star.body.gravity.y = 500;
+
+    // Give each star random bounce values
+    star.body.bounce.y = 0.7 + Math.random() * 0.2;
+  }
+}
+
+function collectStar(player, star) {
+  // Remove the star
+  star.kill();
+
+  // Add and update the score
+  score += 10;
+  scoreText.text = 'Score: ' + score;
+}
+
+function addScore() {
+  score = 0;
+  scoreText = game.add.text(12, 12, 'Score: 0', { fontSize: '20px', fill: '#000' });
+}
+
+</script>
+
+</body>
+</html>
