@@ -11,3 +11,5 @@ Single Page
 [Frankly]({{ site.baseurl }}{% link /assets/spa/frankly/index.html %})
 
 [Phaser Test]({{ site.baseurl }}{%link /assets/spa/myfirstphaser/index.html %})
+
+[Chess Rampage]({{ site.baseurl }}{%link /assets/spa/chessrampage/index.html %})
