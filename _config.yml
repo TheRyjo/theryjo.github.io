@@ -19,7 +19,7 @@ highlighter         : rouge
 # Serving
 port                : 4000
 host                : 127.0.0.1
-baseurl             : ""
+baseurl             : "/"
 
 # Permalinks
 permalink           : pretty
