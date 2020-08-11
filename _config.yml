@@ -1,33 +1,59 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Handling Reading
+safe                : false
+strict_front_matter : false
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Hi, I'm Ryan.
-email: 
-description: > # this means to ignore newlines until "baseurl:"
-  I'm a software engineer in Los Angeles.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: TheRyjo
-github_username: TheRyjo
+# Filtering Content
+show_drafts         : false
+limit_posts         : 0
+future              : false
+unpublished         : false
 
-# Build settings
-markdown: kramdown
-# theme: minima
-theme: jekyll-theme-minimal
-gems:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+# Plugins
+whitelist           : []
+plugins             : [jekyll-paginate]
+
+# Conversion
+markdown            : kramdown
+highlighter         : rouge
+
+# Serving
+port                : 4000
+host                : 127.0.0.1
+baseurl             : "/"
+
+# Permalinks
+permalink           : pretty
+
+# Outputting
+timezone            : America/Los_Angeles
+
+quiet               : false
+verbose             : false
+defaults            : []
+
+kramdown:
+  show_warnings     : false
+
+# Plugins
+paginate            : 5
+
+# Custom
+title            : Ryjo
+tagline          : 'Software Developer'
+description      : 'LA based software developer'
+version          : 0.1
+url              : http://www.theryjo.com
+author:
+  name           : 'Ryan Jones'
+  url            : https://twitter.com/TheRyjo
+twitter_username : TheRyjo
+github_username  : TheRyjo
+
+# Front matter defaults
+#defaults:
+#  -
+#    scope:
+#      path: "" # an empty string here means all files in the project
+#    values:
+#      layout: "default"
+

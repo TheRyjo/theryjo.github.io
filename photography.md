@@ -1,5 +1,7 @@
 ---
-layout: default_custom
+layout: page 
+title: Photography 
+
 custom_css:
 - featherlight-1.7.0/featherlight.min
 - featherlight-1.7.0/featherlight.gallery.min
@@ -29,7 +31,6 @@ photos:
 - untitled
 - white-hot
 ---
-[Home]({{ site.baseurl }}{% link index.md %})
 
 Here are some of my photos.
 

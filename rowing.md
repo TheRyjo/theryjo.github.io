@@ -1,5 +1,7 @@
 ---
-layout: default_custom
+layout: page
+title: Rowing
+
 custom_css:
 - featherlight-1.7.0/featherlight.min
 - featherlight-1.7.0/featherlight.gallery.min
@@ -8,7 +10,6 @@ custom_js:
 - featherlight-1.7.0/featherlight.min
 - featherlight-1.7.0/featherlight.gallery.min
 ---
-[Home]({{ site.baseurl }}{% link index.md %})
 
 I started rowing in my freshman year of highschool. I continued in college, competing on the freshman and varsity squads.
 
