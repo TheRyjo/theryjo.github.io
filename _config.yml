@@ -20,6 +20,7 @@ highlighter         : rouge
 port                : 4000
 host                : 127.0.0.1
 baseurl             : "/"
+url                 : http://www.theryjo.com
 
 # Permalinks
 permalink           : pretty
@@ -42,7 +43,6 @@ title            : Ryjo
 tagline          : 'Software Developer'
 description      : 'LA based software developer'
 version          : 0.1
-url              : http://www.theryjo.com
 author:
   name           : 'Ryan Jones'
   url            : https://twitter.com/TheRyjo
