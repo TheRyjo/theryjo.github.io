@@ -1,0 +1,49 @@
+<!-- Credits - https://www.youtube.com/watch?v=W06u8rj1c2s -->
+<div class="glow-ball" style="margin: 0 auto;">
+    <a href="https://en.wikipedia.org/wiki/Ball_(disambiguation)" target="_blank"></a>
+</div>
+
+<style webc:keep>
+.glow-ball {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 40px #fff,
+    inset 20px 0 50px #EE82EE,
+    inset -20px 0 50px #003A88,
+
+    inset 20px 0 250px #EE82EE,
+    inset -20px 0 250px #003A88,
+
+    0 0 5px #fff,
+    -10px 0 50px #EE82EE,
+    10px 0 50px #003A88;
+    animation: load 10s infinite;
+}
+.glow-ball button,
+.glow-ball a {
+  display: block;
+  width: 266px;
+  height: 266px;
+  border-radius: 50%;
+  margin-left: -8px;
+}
+@keyframes load
+{
+  0%
+  {
+    transform: rotate(0);
+    filter: hue-rotate(80deg);
+  }
+  50%
+  {
+    filter: hue-rotate(100deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+    filter: hue-rotate(60deg);
+  }
+}
+</style>

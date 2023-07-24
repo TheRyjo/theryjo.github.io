@@ -1,0 +1,55 @@
+<div class="post">
+  <h2 class="post__title"><a :href="post.url" @text="post.data.title"></a></h2>
+
+  <div class="post__meta">
+    <span class="post__date" @text="fixUTC(post.date)"></span> <!-- date: "%Y-%m-%d" -->
+    <span webc:if="hiddenTagExcluded(post.data.tags).length">
+      &nbsp; - &nbsp;
+        <tag
+          webc:for="tag of hiddenTagExcluded(post.data.tags)"
+          :@text="tag"
+        ></tag
+    </span>
+  </div>
+
+  <p
+    webc:if="post.data.desc"
+    class="post__desc"
+    @text="post.data.desc"
+  ></p>
+
+  <a
+    webc:if="post.data.icon"
+    class="post__icon"
+    :href="post.url"
+  ><img :src="post.data.icon"></a>
+</div>
+
+<style webc:keep>
+.post {
+  margin: 0 0 1.5em 0;
+  padding: 0.05px; /* Prevent margin collapse */
+}
+.post__title {
+  display:inline;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.post__meta {
+  margin: 0 0 .5em 0;
+  line-height: 1.5em;
+}
+.post__date {
+  color: #a2a2a2;
+}
+.post__desc {
+  margin: 0 0 .5em 0;
+}
+.post__icon {
+  display: inline-block;
+  max-width: 400px;
+  margin-bottom: .5em;
+}
+</style>
