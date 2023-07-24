@@ -33,11 +33,10 @@ module.exports = function(eleventyConfig) {
         jsTruthy: true
     })
     eleventyConfig.addPassthroughCopy({
-        // "node_modules/normalize.css/normalize.css": "normalize.css",
-        // "bundle.css": "bundle.css",
         "assets/fonts": "fonts",
         "assets/icons": "icons",
         "assets/spa": "spa",
+        "CNAME": "CNAME"
     })
     eleventyConfig.ignores.add("README.md")
     eleventyConfig.ignores.add("/posts/drafts")
