@@ -51,17 +51,23 @@
     <main style="flex-grow: 1">
   
 
-  <post post="[object Object]"><h2 class="post__title"><a href="/posts/2-second/">Sample Post 2</a></h2>
+  <post post="[object Object]"><div class="post">
+  <h2 class="post__title"><a href="/posts/2-second/">Sample Post 2</a></h2>
 
-<div class="post__meta">
-  <span class="post__date">2023-07-24</span> <!-- date: "%Y-%m-%d" -->
-  </div>
+  <div class="post__meta">
+    <span class="post__date">2023-07-24</span> <!-- date: "%Y-%m-%d" -->
+    </div>
 
+  
 
-
-
+  
+</div>
 
 <style>
+.post {
+  margin: 0 0 1.5em 0;
+  padding: 0.05px; /* Prevent margin collapse */
+}
 .post__title {
   display:inline;
   margin: 0;
@@ -70,28 +76,32 @@
   line-height: 1.5em;
 }
 .post__meta {
-  margin: 0;
-  padding-bottom: 1.5em;
+  margin: 0 0 .5em 0;
   line-height: 1.5em;
 }
 .post__date {
   color: #a2a2a2;
 }
+.post__desc {
+  margin: 0 0 .5em 0;
+}
 .post__icon {
   display: inline-block;
   max-width: 400px;
+  margin-bottom: .5em;
 }
 </style>
 </post>
   
 
-  <post post="[object Object]"><h2 class="post__title"><a href="/posts/1-first/">Sample Post</a></h2>
+  <post post="[object Object]"><div class="post">
+  <h2 class="post__title"><a href="/posts/1-first/">Sample Post</a></h2>
 
-<div class="post__meta">
-  <span class="post__date">2023-07-11</span> <!-- date: "%Y-%m-%d" -->
-  <span>
-    &nbsp; - &nbsp;
-      <tag><span class="tag">first</span>
+  <div class="post__meta">
+    <span class="post__date">2023-07-11</span> <!-- date: "%Y-%m-%d" -->
+    <span>
+      &nbsp; - &nbsp;
+        <tag><span class="tag">first</span>
 
 <style>
 .tag {
@@ -106,13 +116,18 @@
 }
 </style>
 </tag>
-</span></div>
+  </span></div>
 
+  
 
-
-
+  
+</div>
 
 <style>
+.post {
+  margin: 0 0 1.5em 0;
+  padding: 0.05px; /* Prevent margin collapse */
+}
 .post__title {
   display:inline;
   margin: 0;
@@ -121,16 +136,19 @@
   line-height: 1.5em;
 }
 .post__meta {
-  margin: 0;
-  padding-bottom: 1.5em;
+  margin: 0 0 .5em 0;
   line-height: 1.5em;
 }
 .post__date {
   color: #a2a2a2;
 }
+.post__desc {
+  margin: 0 0 .5em 0;
+}
 .post__icon {
   display: inline-block;
   max-width: 400px;
+  margin-bottom: .5em;
 }
 </style>
 </post>
