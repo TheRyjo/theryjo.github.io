@@ -35,6 +35,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({
         "assets/fonts": "fonts",
         "assets/icons": "icons",
+        "assets/images": "images",
         "assets/spa": "spa",
         "CNAME": "CNAME"
     })
