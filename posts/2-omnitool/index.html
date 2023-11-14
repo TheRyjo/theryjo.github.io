@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    
+    <style>
+      /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}@font-face{font-family:figtree;font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/figtree-v1-latin-regular.woff2')}@font-face{font-family:figtree;font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/figtree-v1-latin-600.woff2')}*,::after,::before{box-sizing:border-box}*{border:none}body,html{height:100%;min-height:100%}body{position:relative;font-family:Figtree,sans-serif;color:#222;text-rendering:optimizeLegibility;max-width:700px;margin:0 auto;padding:0 25px}main{max-width:768px}h1,h2{font-weight:600}a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}img{display:block;max-width:100%}sub,sup{line-height:0}.inline{display:inline}.text-center{text-align:center}.d-flex{display:flex}.justify-content-center{justify-content:center}.justify-content-between{justify-content:space-between}.align-items-center{align-items:center}.nav{list-style-type:none}.nav li{display:inline;margin:0 5px}.nav__link{color:inherit;text-decoration:none}.nav__link--current{text-decoration:underline}
+    </style>
+  </head>
+  <body style="display: flex; flex-direction: column;">
+    <div
+    class="header d-flex justify-content-between align-items-center"
+    style="margin: 25px 0 75px 0;"
+>
+  <h1 style="font-size: 1.6rem"><a href="/" style="color: inherit; text-decoration: none">Ryjo</a></h1>
+
+  <nav class="nav inline" role="navigation">
+    <ul>
+      
+      <li>
+        <a 
+           class="nav__link"
+           
+           href="/work/"
+           style="font-size: 1.1rem"
+        >Work</a>
+      </li>
+      <li>
+        <a 
+           class="nav__link"
+           
+           href="/posts/"
+           style="font-size: 1.1rem"
+        >Posts</a>
+      </li>
+      <li>
+        <a 
+           class="nav__link"
+           
+           href="/about/"
+           style="font-size: 1.1rem"
+        >About</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+    <main style="flex-grow: 1">
+  <p><b><u><a href="https://github.com/theryjo/omnitool">Omnitool</a></u></b> is a Chrome extension prototype that enables quick access to custom utilities.</p>
+<div style="text-align: center">
+<video controls autoplay loop muted width="375" style="text-align: center">
+  <source src="/images/2-omnitool/extension-seq.mp4" type="video/mp4">
+  This browser does not display the video tag.
+</video>
+</div>
+<br />
+<p>Omnitool has an omnibox-style interface for tool search and invocation, offering speed, simplicity, and flexibility for tasks lacking support from built-in browser tools.</p>
+<p>I created Omnitool with inspiration from my experience on a small developer team supporting a host of CMS and service-backed web applications for a Fortune 50 client. Day-to-day operations included repeated tasks such as:</p>
+<ul>
+<li><em>Navigating complex web environments</em>.</li>
+<li><em>Debugging client-initiated service calls</em>.</li>
+<li><em>Making frequent API calls for clears and other parameterized endpoints</em>.</li>
+<li><em>Inspecting and reproducing web application state</em>.</li>
+</ul>
+<p>Team members had previously written a handful of small (and very useful) one-off browser extensions. The concept for Omnitool came about as a means to consolidate and provide an efficient, intuitive interface for these tools.</p>
+<p>Some noteworthy features listed by design objective:</p>
+<ol>
+<li>SIMPLE
+<ul>
+<li><em>A unified omnibox-style tool search interface</em>.</li>
+<li><em>A consistent command-based model for tool invocation</em>.</li>
+<li><em>A pattern for wrapping pre-existing pages as tools with 'iframe'</em>.</li>
+</ul>
+</li>
+</ol>
+<div style="white-space: nowrap">
+<img src="/images/2-omnitool/extension-help.png"  width="300" alt="todo" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/extension-autocomplete.png"  width="300" alt="todo" style="display: inline-block; vertical-align: top">
+</div>
+<br />
+<ol start="2">
+<li>FAST
+<ul>
+<li><em>Quick-opening when configured with a keyboard shortcut (rec. <kbd>CMD</kbd> + <kbd>K</kbd>)</em>.</li>
+<li><em>Tool search autocomplete</em>.</li>
+<li><em>A tool invocation history with shortcuts for tool selection and re-invocation</em>.</li>
+</ul>
+</li>
+</ol>
+<br />
+<div style="white-space: nowrap">
+<img src="/images/2-omnitool/extension-lorem-history.png"  width="300" alt="todo" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/extension-lorem-param.png"  width="300" alt="todo" style="display: inline-block; vertical-align: top">
+</div>
+<br />
+<ol start="3">
+<li>FLEXIBLE
+<ul>
+<li><em>Tool definitions that support a wide range of custom tools</em>.</li>
+<li><em>Optional tool implementations patterns for tool panes, tool execution output, and hybrid text/GUI tool interfaces</em>.</li>
+<li><em>Tool 'pinning' to allow for multiple tool selection</em>.</li>
+</ul>
+</li>
+</ol>
+<br />
+<div style="white-space: nowrap">
+<img src="/images/2-omnitool/extension-links-pop.png"  width="250" alt="todo" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/extension-color.png"  width="250" alt="todo" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/extension-env-tab.png"  width="250" alt="todo" style="display: inline-block; vertical-align: top">
+</div>
+<br />
+<p>The Omnitool 'demo-tools' branch includes tool samples that showcase these features (as shown in screenshots above.)</p>
+<p>Tool development is accessible to most web developers. A tool definition consists of a small package of files.</p>
+<img src="/images/2-omnitool/tool-files.png"  width="225" alt="todo" style="display: inline-block; vertical-align: top">
+<br />
+<p>The tool logic and metadata is defined in a JS/TS module.</p>
+<img src="/images/2-omnitool/tool-code.png"  width="450" alt="todo" style="display: inline-block; vertical-align: top">
+<br />
+<p>The optional tool UI is defined in a linked Vue component.</p>
+<img src="/images/2-omnitool/tool-pane.png"  width="450" alt="todo" style="display: inline-block; vertical-align: top">
+<br />
+<br />
+<p>See the <u><a href="https://github.com/theryjo/omnitool/tree/demo-tools">source</a></u> on Github.</p>
+<p>That's about it! In the future I may provide additional implementation details in a separate post.</p>
+<p>Some quirks that I would like to address prior to release:</p>
+<ul>
+<li>Omnitool is not listed in the Chrome Web Store. Although I haven't tried yet, this may be impossible due to the store's &quot;single purpose&quot; policy for extensions, which has been in effect since 2013. This <a href="https://developer.chrome.com/docs/webstore/program-policies/quality-guidelines-faq/#:~:text=To%20maintain%20the%20quality%20of,in%20the%20Chrome%20Web%20Store.">policy</a> requires &quot;extensions to have only a single purpose with respect to its subject matter or browser function&quot;. In the meantime, the extension may be loaded in developer mode as an &quot;unpacked extension&quot; without impacting functionality.</li>
+<li>Addition of a new tool currently requires a rebuild and reload. Hot-swappable tools would greatly enhance ease of tool sharing and developer synchronization. This might also be achieved with data-driven wrapping tools.</li>
+<li>Omnitool lacks global and tool-specific configuration options. It does save a small amount of core state on close, but adding configuration or customization would require this to be extended.</li>
+<li>Additional tools including more sophisticated and relevant samples.</li>
+</ul>
+<p>Thank you for reading! I'm looking forward to testing and feedback to see if this prototype is worth further development.</p>
+<p>Cheers!</p>
+
+
+</main>
+
+    <footer
+    class="d-flex justify-content-center align-items-center"
+    style="font-size: 1rem;color: #888;height: 110px;flex-shrink: 0;"
+>
+    <div>
+        <i>Ryan Jones</i>
+        &nbsp;
+        <<a href="https://www.linkedin.com/in/theryjo/" target="_blank" style="vertical-align: middle"
+        ><img class="inline" src="/icons/linkedin.svg" style="width:18px"></a>
+        <a href="https://github.com/theryjo" target="_blank" style="vertical-align: middle"
+        ><img class="inline" src="/icons/github.svg" style="width:18px"></a>>
+        &nbsp;
+        ©2023
+    </div>
+</footer>
+
+  </body>
+</html>
