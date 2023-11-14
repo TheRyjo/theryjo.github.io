@@ -1,7 +1,7 @@
 ---
 title: New Website
 date: 2023-11-12
-tags: ['first', 'site']
+tags: ['first']
 ---
 It's HERE!
 
