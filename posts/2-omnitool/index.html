@@ -58,21 +58,21 @@
 </div>
 <br />
 <p>Omnitool has an omnibox-style interface for tool search and invocation, offering speed, simplicity, and flexibility for tasks lacking support from built-in browser tools.</p>
-<p>I created Omnitool with inspiration from my experience on a small developer team supporting a host of CMS and service-backed web applications for a Fortune 50 client. Day-to-day operations included repeated tasks such as:</p>
+<p>I created Omnitool with inspiration from experience on a small developer team supporting a suite of CMS and service-backed web applications for a Fortune 50 client. Day-to-day operations included repeated tasks such as:</p>
 <ul>
 <li><em>Navigating complex web environments</em>.</li>
-<li><em>Debugging client-initiated service calls</em>.</li>
-<li><em>Making frequent API calls for clears and other parameterized endpoints</em>.</li>
+<li><em>Making frequent API calls to trigger cache clears and other operations</em>.</li>
 <li><em>Inspecting and reproducing web application state</em>.</li>
+<li><em>Debugging client-initiated service calls</em>.</li>
 </ul>
-<p>Team members had previously written a handful of small (and very useful) one-off browser extensions. The concept for Omnitool came about as a means to consolidate and provide an efficient, intuitive interface for these tools.</p>
-<p>Some noteworthy features listed by design objective:</p>
+<p>Team members had previously written a handful of small (and very useful) one-off browser extensions. The concept for Omnitool came about as a means to consolidate these tools and provide an efficient, intuitive interface.</p>
+<p>Some noteworthy features listed by objective:</p>
 <ol>
 <li>SIMPLE
 <ul>
 <li><em>A unified omnibox-style tool search interface</em>.</li>
 <li><em>A consistent command-based model for tool invocation</em>.</li>
-<li><em>A pattern for wrapping pre-existing pages as tools with 'iframe'</em>.</li>
+<li><em>A pattern for wrapping pre-existing pages as tools with an 'iframe'</em>.</li>
 </ul>
 </li>
 </ol>
@@ -85,7 +85,7 @@
 <li>FAST
 <ul>
 <li><em>Quick-opening when configured with a keyboard shortcut (rec. <kbd>CMD</kbd> + <kbd>K</kbd>)</em>.</li>
-<li><em>Tool search autocomplete</em>.</li>
+<li><em>Autocomplete for tool search</em>.</li>
 <li><em>A tool invocation history with shortcuts for tool selection and re-invocation</em>.</li>
 </ul>
 </li>
@@ -113,7 +113,7 @@
 </div>
 <br />
 <p>The Omnitool 'demo-tools' branch includes tool samples that showcase these features (as shown in screenshots above.)</p>
-<p>Tool development is accessible to most web developers. A tool definition consists of a small package of files.</p>
+<p>The tool development pattern is accessible to most web developers. A tool definition consists of a small package of files.</p>
 <img src="/images/2-omnitool/tool-files.png"  width="225" alt="todo" style="display: inline-block; vertical-align: top">
 <br />
 <p>The tool logic and metadata is defined in a JS/TS module.</p>
@@ -130,7 +130,7 @@
 <li>Omnitool is not listed in the Chrome Web Store. Although I haven't tried yet, this may be impossible due to the store's &quot;single purpose&quot; policy for extensions, which has been in effect since 2013. This <a href="https://developer.chrome.com/docs/webstore/program-policies/quality-guidelines-faq/#:~:text=To%20maintain%20the%20quality%20of,in%20the%20Chrome%20Web%20Store.">policy</a> requires &quot;extensions to have only a single purpose with respect to its subject matter or browser function&quot;. In the meantime, the extension may be loaded in developer mode as an &quot;unpacked extension&quot; without impacting functionality.</li>
 <li>Addition of a new tool currently requires a rebuild and reload. Hot-swappable tools would greatly enhance ease of tool sharing and developer synchronization. This might also be achieved with data-driven wrapping tools.</li>
 <li>Omnitool lacks global and tool-specific configuration options. It does save a small amount of core state on close, but adding configuration or customization would require this to be extended.</li>
-<li>Additional tools including more sophisticated and relevant samples.</li>
+<li>A lack of sophisticated and relevant demo tools.</li>
 </ul>
 <p>Thank you for reading! I'm looking forward to testing and feedback to see if this prototype is worth further development.</p>
 <p>Cheers!</p>
