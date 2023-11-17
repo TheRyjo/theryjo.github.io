@@ -37,6 +37,7 @@ module.exports = function(eleventyConfig) {
         "assets/icons": "icons",
         "assets/images": "images",
         "assets/spa": "spa",
+        "assets/vendor": "vendor",
         "CNAME": "CNAME"
     })
     eleventyConfig.ignores.add("README.md")

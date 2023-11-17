@@ -12,6 +12,9 @@
     <style>
       {{ css | cssmin }}
     </style>
+    <link rel="stylesheet" href="/vendor/highlight-js/atom-one-dark.css">
+    <script src="/vendor/highlight-js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
   </head>
   <body style="display: flex; flex-direction: column;">
     {% include '_header.html' %}
