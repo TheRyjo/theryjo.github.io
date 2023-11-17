@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    
+    <style>
+      /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}@font-face{font-family:figtree;font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/figtree-v1-latin-regular.woff2')}@font-face{font-family:figtree;font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/figtree-v1-latin-600.woff2')}*,::after,::before{box-sizing:border-box}:not(hr){border:none}body,html{height:100%;min-height:100%}body{position:relative;font-family:Figtree,sans-serif;color:#222;text-rendering:optimizeLegibility;max-width:700px;margin:0 auto;padding:0 25px}main{max-width:768px}h1,h2{font-weight:600}a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}img{display:block;max-width:100%}sub,sup{line-height:0}pre{font-size:.9rem}.inline{display:inline}.text-center{text-align:center}.d-flex{display:flex}.justify-content-center{justify-content:center}.justify-content-between{justify-content:space-between}.align-items-center{align-items:center}.nav{list-style-type:none}.nav li{display:inline;margin:0 5px}.nav__link{color:inherit;text-decoration:none}.nav__link--current{text-decoration:underline}
+    </style>
+    <link rel="stylesheet" href="/vendor/highlight-js/atom-one-dark.css">
+    <script src="/vendor/highlight-js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  </head>
+  <body style="display: flex; flex-direction: column;">
+    <div
+    class="header d-flex justify-content-between align-items-center"
+    style="margin: 25px 0 75px 0;"
+>
+  <h1 style="font-size: 1.6rem"><a href="/" style="color: inherit; text-decoration: none">Ryjo</a></h1>
+
+  <nav class="nav inline" role="navigation">
+    <ul>
+      
+      <li>
+        <a 
+           class="nav__link"
+           
+           href="/work/"
+           style="font-size: 1.1rem"
+        >Work</a>
+      </li>
+      <li>
+        <a 
+           class="nav__link"
+           
+           href="/posts/"
+           style="font-size: 1.1rem"
+        >Posts</a>
+      </li>
+      <li>
+        <a 
+           class="nav__link"
+           
+           href="/about/"
+           style="font-size: 1.1rem"
+        >About</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+    <main style="flex-grow: 1">
+  <div style="text-align: center">
+(Cross-posted with permission from
+<u><a href="https://www.mavice.com/blog/dynamic-alignment-with-resizeobserver/">Mavice Blog</a></u>)
+</div>
+<h2>❤️ CSS3</h2>
+<p>We love modern web standards. CSS3 APIs like Flexbox and Grid offer robust tools for layout – adept at cleanly handling common scenarios. Still, special circumstances arise. When they do, JS APIs like ResizeObserver are available to bridge the gap.</p>
+<h2>A Card Problem</h2>
+<p>On entry to a client automotive pricing application, the user is presented with vehicle cards in a carousel.</p>
+<img src="/images/work/dynamic-alignment-resizeobserver/card-carousel-1.png"  width="800" alt="todo" style="">
+<p>For some models, the cards are straightforward – names, pricing, images, marketing copy, disclaimers, etc. These cases more closely reflect the original design – a simple layout with alignment achieved with fixed heights, element positioning, and content restrictions.</p>
+<p>Despite such cases, the underlying card components are dynamic and complex. Driven by authored content, service data, and application logic, there exist a large number of element combinations and sizes which may display for other model lines. Cards may have seasonal notices, incentives, option toggles, and other conditionally displayed elements – all driven by content, services, and configuration across a large number of models.</p>
+<p>This complexity brings us to our problem – alignment. Without frequent design updates to keep pace with new features, the existing layout was stressed. Small content overflows or enablement of features would cause misalignment of adjacent card sections.</p>
+<img src="/images/work/dynamic-alignment-resizeobserver/card-carousel-3.png"  width="800" alt="todo" style="">
+<p>As more models displayed alignment issues, it was clear a comprehensive fix was needed.</p>
+<p><u><a href="#demo">Skip to demo</a></u></p>
+<h2>Seeking Alignment</h2>
+<p>While redesigning the cards or adding restrictions on content authoring were possible, they would incur substantial client overhead.</p>
+<p>What about available layouts APIs? CSS Grid, Flexbox, and Tables were all considered, but were either insufficient or required the same hack to utilize. Cards would need to be split into constituent sections and distributed across a layout. This would break encapsulation for the card components and increase complexity. We were also already displaying cards in multiple layouts, including both carousels and grids.</p>
+<p>Maybe alignment was not the container’s responsibility, but the card’s. Could the card flexibly align itself with neighbors? With pixel-perfect alignment and no restrictions on configuration or content? Say hello to…</p>
+<h2>Resize Observer</h2>
+<p>ResizeObserver is an interface for monitoring dimension changes in the DOM. As a lower-level JS module, it’s not typically used for layout. However, with the power to efficiently monitor component sizes in realtime, it is worth considering in a pinch.</p>
+<p>So how does it work?</p>
+<pre><code class="language-JS">const myObserver = new ResizeObserver(entries =&gt; {
+    entries.forEach(entry =&gt; {
+        console.log('height', entry.contentRect.height);
+    });
+});
+
+const myEl = document.querySelector('.my-element');
+myObserver.observe(myEl);
+</code></pre>
+<p>If we can measure the height of card sections, we can respond to size changes and inject a padding element to bring all section heights to the max sibling height. What might this look like in practice?</p>
+<p>This wrapper element has a dynamically injected spacer to align with its neighbors.</p>
+<img src="/images/work/dynamic-alignment-resizeobserver/height-element.png" alt="todo" style="">
+<p>An example with spacer elements highlighted.</p>
+<img src="/images/work/dynamic-alignment-resizeobserver/els-highlighted-1.png"  width="800" alt="todo" style="">
+<h2>Vue Directive</h2>
+<p>Our application is written in Vue, so we could implement a solution using a Vue directive. The logic for element observation, height calculation, and padding element injection would reside in one location and be cleanly applicable with a directive tag. When used, the directive would inject padding elements and register itself for height updates.</p>
+<p>(demo to follow)</p>
+<pre><code class="language-JS">const registry = {
+    _lookup: new Map(),
+};
+
+// On resize events, trigger recalculation
+const resizeObserver = new ResizeObserver((entries) =&gt; {
+    const targetKeys = new Set(
+        entries.map((entry) =&gt; registry._lookup.get(entry.target))
+    );
+    targetKeys.forEach((groupKey) =&gt; registry[groupKey]?.recalc());
+});
+
+function recalcHeights(groupKey) {
+    const els = registry[groupKey]?.els;
+    // Calculate max height and update spacers
+    ...
+    // Update spacers
+    ...
+}
+
+function zeroSpacers(groupKey) { ... }
+
+function augmentAndRegister(el, groupKey = '_') {
+    // Append spacer el
+    ...
+    // Add to registry
+    ...
+    // Observe with resizeObserver
+    resizeObserver.observe(el);
+}
+
+function unregister(el, groupKey = '_') { ... }
+
+function bind(el, { value: groupKey }) {
+    augmentAndRegister(el, groupKey);
+}
+
+function unbind(el, { value: groupKey }) { ... }
+
+const directive = {
+    bind,
+    unbind,
+};
+
+export default directive;
+</code></pre>
+<p>This allowed card sections to be tagged with a height-sync directive and unique key. The following card template code indicates the ‘.marketing-message-wrapper’ section will be height synchronized across any card instances. (If multiple card sets are desired, a composite key with the card group may be used.)</p>
+<img src="/images/work/dynamic-alignment-resizeobserver/height-sync-dir.png" alt="todo" style="">
+<h2>Alignment Demo</h2>
+<p>See this pattern implemented in vanilla JS on <u><a href="https://codepen.io/TheRyjo/pen/xxjymeb">Codepen</a></u>.</p>
+<div id="demo">
+<p class="codepen" data-height="500" data-default-tab="result" data-slug-hash="xxjymeb" data-user="TheRyjo" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/TheRyjo/pen/xxjymeb">
+  Resize Observer - Height Demo</a> by Ryan Jones (<a href="https://codepen.io/TheRyjo">@TheRyjo</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+</div>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+</main>
+
+    <footer
+    class="d-flex justify-content-center align-items-center"
+    style="font-size: 1rem;color: #888;height: 110px;flex-shrink: 0;"
+>
+    <div>
+        <i>Ryan Jones</i>
+        &nbsp;
+        <<a href="https://www.linkedin.com/in/theryjo/" target="_blank" style="vertical-align: middle"
+        ><img class="inline" src="/icons/linkedin.svg" style="width:18px"></a>
+        <a href="https://github.com/theryjo" target="_blank" style="vertical-align: middle"
+        ><img class="inline" src="/icons/github.svg" style="width:18px"></a>>
+        &nbsp;
+        ©2023
+    </div>
+</footer>
+
+  </body>
+</html>
