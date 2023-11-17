@@ -1,7 +1,7 @@
 ---
 title: Omnitool
 date: 2023-11-13
-tags: ['chrome extension']
+tags: ['chrome Extension', 'vue']
 ---
 <b><u>[Omnitool](https://github.com/theryjo/omnitool)</u></b> is a Chrome extension prototype that enables quick access to custom utilities.
 
