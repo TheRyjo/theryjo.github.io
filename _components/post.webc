@@ -22,7 +22,7 @@
     webc:if="post.data.icon"
     class="post__icon"
     :href="post.url"
-  ><img :src="post.data.icon"></a>
+  ><img :src="post.data.icon" style="image-rendering: pixelated"></a>
 </div>
 
 <style webc:keep>
@@ -49,7 +49,6 @@
 }
 .post__icon {
   display: inline-block;
-  max-width: 400px;
   margin-bottom: .5em;
 }
 </style>

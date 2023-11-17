@@ -21,9 +21,10 @@
   box-sizing: border-box;
 }
 
-* {
+*:not(hr) {
   border: none;
 }
+
 
 html, body {
   height: 100%;
@@ -65,6 +66,10 @@ img {
 
 sub, sup {
   line-height: 0;
+}
+
+pre {
+  font-size: .9rem;
 }
 
 /* Utility */
