@@ -60,45 +60,28 @@
 </div>
 
     <main style="position: relative; flex-grow: 1">
-  <p><strong>A few months ago</strong>, I made my first-ever open source contribution.</p>
-<p>This admission may surprise, even shock, as I've worked in industry across a variety of stacks for over a decade.</p>
-<p>While it's true my employers have been small and mid-size companies with a penchant for using rather than creating open source software, the real reason I've made it so far without contributing is simple...</p>
-<p>I never tried.</p>
-<p>Indeed, the massive and welcoming ecosystem for open source software today leaves little excuse to not take part. As noted on <u><a href="https://github.blog/2022-11-17-octoverse-2022-10-years-of-tracking-open-source/">Github's blog</a></u>:</p>
-<blockquote>
-<p>&quot;In 2022 alone, developers started 52 million new open source projects on GitHub—and developers across GitHub made more than 413 million contributions to open source projects.&quot;</p>
-</blockquote>
-<p>This is not to say that issues of project scarcity, gatekeeping, or other barriers to entry don't exist, but the simple fact is that a vast array of opportunities exists for developers in many domains and of many different skill levels.</p>
-<p>Which brings me to...</p>
-<h4><u><b><a href="https://monkeytype.com/">MonkeyType</a></b></u></h4>
-<p>Monkeytype was created in 2020 as a single-developer passion project to make a minimalist, customizable online typing test. Since then it has grown rapidly, with <u><a href="https://monkeytype.com/about">365 million tests taken, an active Discord server, and hundreds of supporters and contributors</a></u>.</p>
-<img src="/images/3-fingermap/monkeytype-home.png"  width="600" alt="todo" style="">
-<p>I've been a big fan of Monkeytype for my typing practice, with highest speeds to date being 135wpm over 15 seconds and 117wpm over 60 seconds (100% accuracy). When I saw that Monkeytype is <u><a href="https://github.com/monkeytypegame">open-source on Github</a></u>, I saw a perfect opportunity to contribute.</p>
-<p>In particular, I observed that the subproject <u><a href="https://github.com/monkeytypegame/monkeytype-fingermap">Fingermap</a></u>, a keyboard finger map editor, exhibited multiple issues I would happily take on, including:</p>
+  <p><strong>ROAM Data</strong> was a mobile commerce solutions provider founded in 2005 and acquired by Ingenico Group in 2015. Prior to its acquisition, ROAM Data raised $6,500,000/Series B and $35,000,000/Series C from Ingenico Group in 2009 and 2012 respectively.</p>
+<p>ROAM Data's Mobile Commerce Manager (<strong>MCM</strong>) provided a host of services and applications related to merchan. See <u><a href="https://mobile-solutions.ingenico.com/wp-content/uploads/2013/06/ROAM_MCM_Product_Sheet.pdf">product sheet</a></u>.</p>
+<img src="/images/work/roam-data/mcm.png"  width= "600" alt="todo" style="margin: 0 auto">
+<p>Tenure:</p>
 <ul>
-<li>An inability to select keys using keypress.</li>
-<li>A lack of mobile layout/responsiveness.</li>
-<li>An outdated / diverged style as compared to the main site.</li>
+<li><strong>2013 - 2015</strong> - ROAM Data (Software Engineer, R&amp;D)<br /></li>
+<li><strong>2015 - 2018</strong> - Ingenico Mobile Solutions (Software Engineer, Core Engineering) <br /></li>
 </ul>
-<img src="/images/3-fingermap/fm-old.png"  width= "600" alt="todo" style="">
-<p>I started by joining the Monkeytype Discord, creating an issue on the repo, forking, and working up a draft solution for keypress selection. I was updating this code as a fun exercise, so I wasn't concerned with negotiating the changes in advance with the project owner <em>Miodec</em>. I hypothesized that providing a hosted demo of the updates would offer a strong introduction and elicit a faster response.</p>
-<img src="/images/3-fingermap/discord-msg.png"  width= "600" alt="todo" style="">
-<p>The response was prompt and positive!</p>
-<p><em>Miodec</em> expressed interest in the update and suggested additional changes. Over the course of a week and with numerous iterations, updates addressing all items of interest were PR'd and merged to the main repo.</p>
-<img src="/images/3-fingermap/fm-new.png"  width="600" alt="todo" style="">
-<br />
-<br />
-<img src="/images/3-fingermap/fm-new-mobile.png"  width="300" alt="todo" style="">
-<p>Some noteworthy process and implementation points:</p>
+<p>Contributions:</p>
 <ul>
-<li><strong>Keypress selection</strong> required changing other shortcuts to remove conflicts. Previously, keys 1-10 had been used for finger selection. The shift key also had overlap as a modifier key, which I resolved with logic to differentiate between quick press (selection) and hold (modifier).</li>
-<li><strong>Header updates</strong> entailed some questions about icon usage, label presence, and styling. These were ultimately resolved with a healthy deference to the main site.</li>
-<li><strong>Responsiveness</strong> required a new mobile header as well as a mechanism for keyboard resizing. This proved pretty interesting, as the existing code was resistant to standard sizing mechanisms. In particular, preserving the aspect ratios on resize was tricky given the layout and markup. To solve this, I created a wrapper that I call an <em>Aspect Ratio Box</em> - scaling smoothly while preserving aspect ratio and interactivity. I've posted a <u><b><a href="https://codepen.io/TheRyjo/pen/ZEmRmgm">demo</a></b></u> to Codepen.</li>
+<li>Core development (features &amp; bug fixes) of next-gen MCM written in Java using OSGI and Spring MVC.</li>
+<li>Refactor of outsourced Admin portal written in ExtJS.</li>
+<li>Legacy .NET backend bug and static code analysis fixes.</li>
+<li>Web portal and API implementations using ASP.NET MVC 4 and ASP.NET 5.</li>
+<li>Web portal implementations using Spring Boot and Angular 4.</li>
 </ul>
-<p>At the time of writing, Fingermap is hosted at <u><a href="https://fingermap.monkeytype.com/">https://fingermap.monkeytype.com/</a></u></p>
-<p>I've also separately hosted snapshots for:</p>
-<h4><u><b><a href="https://storage.googleapis.com/ryjo.io/fingermap-before/index.html" target="_blank">Before</a></b></u> | <u><a href="https://storage.googleapis.com/ryjo.io/fingermap-after/index.html" target="_blank">After</a></u></h4>
-<p>Thank you for reading!</p>
+<br />
+<h3>Merchant Portal</h3>
+<img src="/images/work/roam-data/roammerchant.png"  width= "800" alt="todo" style="max-width: 115%;margin: 0 auto">
+<br />
+<h3>Support Portal</h3>
+<img src="/images/work/roam-data/roamsupport.png"  width= "800" alt="todo" style="max-width: 115%;margin: 0 auto">
 
 
 </main>
