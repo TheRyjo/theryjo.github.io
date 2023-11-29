@@ -1,9 +1,9 @@
 ---
 title: New Website
 date: 2023-11-12
-tags: ['first']
+tags: ['first post', '11ty']
 ---
-It's HERE!
+__It's HERE!__
 
 And I'm excited.
 

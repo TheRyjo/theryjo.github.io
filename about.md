@@ -3,15 +3,14 @@ layout: layout.html
 title: About
 eleventyNavigation:
   key: About
-  order: 3
+  order: 4
 ---
-## Hi. I'm Ryan.
+## Hi, I'm Ryan.
 
-I'm a software developer who has worked for 10 years across the web stack (primarily _JS_ and _Java_).
+I'm a software developer with 10+ years of experience across the web stack. I've primarily worked with Typescript, Javascript, and JVM langs.
 
-I've put together this site to share my thoughts and creations.
-
-<br></br>
+I've put together this site to share my professional experience, thoughts, and creations.
+<br /><br />
 ### Welcome! Thank you for visiting.
 
-<div style="text-align: left">More to come...</div>
+More to come...

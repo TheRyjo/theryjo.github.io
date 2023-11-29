@@ -1,10 +1,10 @@
 ---
-title: Monkeytype - Fingermap 
+title: Fingermap 
 date: 2023-11-16
 tags: ['web app','open source']
 ---
 
-A few months ago, I made my first-ever open source contribution.
+__A few months ago__, I made my first-ever open source contribution.
 
 This admission may surprise, even shock, as I've worked in industry across a variety of stacks for over a decade.
 
@@ -25,7 +25,7 @@ Monkeytype was created in 2020 as a single-developer passion project to make a m
 
 <img src="/images/3-fingermap/monkeytype-home.png"  width="600" alt="todo" style="">
 
-I've been a huge fan of Monkeytype for typing practice, with my highest speeds to date being 135wpm over 15 seconds and 117wpm over 60 seconds (100% accuracy). When I saw that Monkeytype is <u>[open-source on Github](https://github.com/monkeytypegame)</u>, I saw a perfect opportunity to contribute.
+I've been a big fan of Monkeytype for my typing practice, with highest speeds to date being 135wpm over 15 seconds and 117wpm over 60 seconds (100% accuracy). When I saw that Monkeytype is <u>[open-source on Github](https://github.com/monkeytypegame)</u>, I saw a perfect opportunity to contribute.
 
 In particular, I observed that the subproject <u>[Fingermap](https://github.com/monkeytypegame/monkeytype-fingermap)</u>, a keyboard finger map editor, exhibited multiple issues I would happily take on, including:
 
