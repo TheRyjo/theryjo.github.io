@@ -2,9 +2,13 @@
 title: Omnitool
 desc: A chrome extension for invoking custom utilities.
 icon: '/images/thumbnail/omnitool.png'
-tags: ['personal', 'chrome extension', 'vue']
+tags: ['demo', 'chrome extension', 'vue']
 ---
+### [⏎](/demos/)
+
 __Omnitool__ is a Chrome extension for fast, omnibox-style access to custom utilities.
+
+See <u>[Post](/posts/2-omnitool/)</u>.
 
 <video controls autoplay loop muted width="425" style="text-align: center">
   <source src="/images/2-omnitool/extension-seq.mp4" type="video/mp4">
