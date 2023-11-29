@@ -4,7 +4,7 @@ const pluginWebc = require("@11ty/eleventy-plugin-webc")
 const CleanCSS= require("clean-css")
 const moment = require("moment")
 
-const HIDDEN_TAGS = ['post', 'professional', 'personal', 'experiment'];
+const HIDDEN_TAGS = ['post', 'professional', 'personal', 'experiment', 'featured'];
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(EleventyRenderPlugin);

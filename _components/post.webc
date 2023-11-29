@@ -1,33 +1,39 @@
-<div class="post">
-  <h2 class="post__title"><a :href="post.url" @text="post.data.title"></a></h2>
+<div class="post" style="display: flex;flex-wrap: wrap;">
+  <div class="left" style="min-width: 250px;max-width: 250px; padding: 10px 25px 0 0">
+    <h2 class="post__title"><a :href="post.url" @text="post.data.title"></a></h2>
 
-  <div class="post__meta">
-    <span class="post__date" @text="fixUTC(post.date)"></span> <!-- date: "%Y-%m-%d" -->
-    <span webc:if="hiddenTagExcluded(post.data.tags).length">
-      &nbsp; - &nbsp;
-        <tag
-          webc:for="tag of hiddenTagExcluded(post.data.tags)"
-          :@text="tag"
-        ></tag
-    </span>
+    <div class="post__meta">
+      <div>
+        <span class="post__date" @text="fixUTC(post.date)"></span> <!-- date: "%Y-%m-%d" -->
+        <br />
+        <span webc:if="hiddenTagExcluded(post.data.tags).length">
+          <tag
+            webc:for="tag of hiddenTagExcluded(post.data.tags)"
+            :@text="tag"
+          ></tag
+        </span>
+      </div>
+    </div>
+
+    <p
+      webc:if="post.data.desc"
+      class="post__desc"
+      @text="post.data.desc"
+    ></p>
   </div>
-
-  <p
-    webc:if="post.data.desc"
-    class="post__desc"
-    @text="post.data.desc"
-  ></p>
-
-  <a
-    webc:if="post.data.icon"
-    class="post__icon"
-    :href="post.url"
-  ><img :src="post.data.icon" style="image-rendering: pixelated"></a>
+  <div class="right">
+    <a
+      webc:if="post.data.icon"
+      class="post__icon"
+      :href="post.url"
+    ><img :src="post.data.icon" style="max-width: 350px;image-rendering: pixelated"></a>
+  </div>
 </div>
+<br />
 
 <style webc:keep>
 .post {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 .5em 0;
   padding: 0.05px; /* Prevent margin collapse */
 }
 .post__title {

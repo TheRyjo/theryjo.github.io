@@ -1,0 +1,27 @@
+<div class="post" style="">
+  <h2 class="post__title"><a :href="post.url" @text="post.data.title"></a></h2>
+  <div class="post__meta">
+    <span class="post__date" @text="fixUTC(post.date)"></span> <!-- date: "%Y-%m-%d" -->
+  </div>
+</div>
+
+<style webc:keep>
+.post {
+  margin: 0 0 .5em 0;
+  padding: 0.05px; /* Prevent margin collapse */
+}
+.post__title {
+  display:inline;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.post__meta {
+  margin: 0 0 .5em 0;
+  line-height: 1.5em;
+}
+.post__date {
+  color: #a2a2a2;
+}
+</style>

@@ -2,8 +2,6 @@
 layout: layout.html
 eleventyImport:
   collections: ["post"]
-myData:
-  myKey: myValue
 ---
 {% renderTemplate "webc" %}
   <glow-ball webc:keep></glow-ball>
@@ -11,9 +9,24 @@ myData:
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
 
-{% for post in collections.post | reverse %}
+<!-- Featured Posts -->
+{% for post in collections.featured %}
   {% renderTemplate "webc", { post: post } %}
-    <post :post="post" webc:keep></post>
+    <post-min :post="post" webc:keep></post-min>
   {% endrenderTemplate %}
 {% endfor %}
+<a class="post__title" href="/posts/">( ... )</a>
+
+<!-- Recent Posts -->
+{#
+{% set reversed = collections.post | reverse %}
+{% for i in range(0, 2) %}
+  {% set post = reversed[i]%}
+  {% renderTemplate "webc", { post: post } %}
+    <post-min :post="post" webc:keep></post-min>
+  {% endrenderTemplate %}
+{% endfor %}
+#}

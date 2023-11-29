@@ -1,0 +1,14 @@
+---
+layout: layout.html
+title: Demos
+eleventyNavigation:
+  key: Demos
+  order: 2
+eleventyImport:
+  collections: ["post"]
+---
+{% for item in collections.demo | reverse %}
+  {% renderTemplate "webc", { post: item } %}
+    <post :post="post" webc:keep></post>
+  {% endrenderTemplate %}
+{% endfor %}
