@@ -1,6 +1,7 @@
 ---
 title: Omnitool
 desc: A chrome extension for invoking custom utilities.
+date: 2023-08-01
 icon: '/images/thumbnail/omnitool.png'
 tags: ['demo', 'chrome extension', 'vue']
 ---
