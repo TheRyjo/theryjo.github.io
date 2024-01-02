@@ -1,6 +1,6 @@
 ---
 title: Card Alignment with ResizeObserver
-desc: 
+desc: Dynamic alignment exercise.
 date: 2023-11-25
 icon: '/images/thumbnail/card-align.png'
 tags: ['demo', 'vue', 'web apis']
