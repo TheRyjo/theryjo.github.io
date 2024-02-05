@@ -10,7 +10,7 @@ tags: ['demo', 'react']
 __BF Viz__ is a runner/visualizer for the esoteric language (Brainf**k).<br />
 This language's interpreter is modeled after a simple turing machine.
 
-<img src="/images/demo/bf-viz.png"  width="500" alt="todo" style="">
+<img src="/images/demo/bf-viz.png"  width="500" alt="bf visualizer screenshot" style="">
 
 ### [Run Demo](https://storage.googleapis.com/ryjo.io/bf-viz/index.html)
 

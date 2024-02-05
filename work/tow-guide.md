@@ -22,7 +22,7 @@ See <u>[Mavice Blog Post](https://www.mavice.com/blog/towing-guide/)</u>
 </div>
 <br />
 
-<img src="/images/work/tow-guide/tow-desktop.png"  width= "600" alt="todo" style="margin: 0 auto">
+<img src="/images/work/tow-guide/tow-desktop.png"  width= "600" alt="Towing Guide home screenshot" style="margin: 0 auto">
 
 <br />
 <br />
@@ -31,7 +31,7 @@ See <u>[Mavice Blog Post](https://www.mavice.com/blog/towing-guide/)</u>
 </div>
 <br />
 
-<img src="/images/work/tow-guide/tow-specs.png"  width= "600" alt="todo" style="margin: 0 auto">
+<img src="/images/work/tow-guide/tow-specs.png"  width= "600" alt="Towing Guide specs screenshot" style="margin: 0 auto">
 
 <br />
 <div style="text-align: center">
@@ -39,6 +39,6 @@ See <u>[Mavice Blog Post](https://www.mavice.com/blog/towing-guide/)</u>
 </div>
 <br />
 
-<img src="/images/work/tow-guide/tow-mobile.png"  width= "400" alt="todo" style="margin: 0 auto">
+<img src="/images/work/tow-guide/tow-mobile.png"  width= "400" alt="Towing Guide mobile screenshot" style="margin: 0 auto">
 
 <br />

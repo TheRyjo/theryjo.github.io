@@ -9,7 +9,7 @@ __ROAM Data__ was a mobile commerce solutions provider founded in 2005 and acqui
 
 ROAM Data's Mobile Commerce Manager (__MCM__) provided a host of services and applications related to merchan. See <u>[product sheet](https://mobile-solutions.ingenico.com/wp-content/uploads/2013/06/ROAM_MCM_Product_Sheet.pdf)</u>.
 
-<img src="/images/work/roam-data/mcm.png"  width= "600" alt="todo" style="margin: 0 auto">
+<img src="/images/work/roam-data/mcm.png"  width= "600" alt="MCM platform brochure" style="margin: 0 auto">
 
 Tenure:
 - __2013 - 2015__ - ROAM Data (Software Engineer, R&D)<br />
@@ -26,12 +26,12 @@ Contributions:
 
 ### Merchant Portal
 
-<img src="/images/work/roam-data/roammerchant.png"  width= "800" alt="todo" style="max-width: 115%;margin: 0 auto">
+<img src="/images/work/roam-data/roammerchant.png"  width= "800" alt="Roam Merchant screenshot" style="max-width: 115%;margin: 0 auto">
 
 <br />
 
 ### Support Portal
 
-<img src="/images/work/roam-data/roamsupport.png"  width= "800" alt="todo" style="max-width: 115%;margin: 0 auto">
+<img src="/images/work/roam-data/roamsupport.png"  width= "800" alt="Support Portal screenshot" style="max-width: 115%;margin: 0 auto">
 
 

@@ -11,7 +11,7 @@ __Omnitool__ is a Chrome extension for fast, omnibox-style access to custom util
 
 See <u>[Post](/posts/2-omnitool/)</u>.
 
-<video controls autoplay loop muted width="425" style="text-align: center">
+<video controls autoplay loop muted width="425" title="Omnitool Demo Screen Recording" style="text-align: center">
   <source src="/images/2-omnitool/extension-seq.mp4" type="video/mp4">
   This browser does not display the video tag.
 </video>

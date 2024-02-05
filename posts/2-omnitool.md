@@ -31,8 +31,8 @@ Some noteworthy features listed by objective:
    - _A pattern for wrapping pre-existing pages as tools with an 'iframe'_.
 
 <div style="white-space: nowrap">
-<img src="/images/2-omnitool/extension-help.png"  width="300" alt="todo" style="display: inline-block; vertical-align: top">
-<img src="/images/2-omnitool/extension-autocomplete.png"  width="300" alt="todo" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/extension-help.png"  width="300" alt="help screenshot" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/extension-autocomplete.png"  width="300" alt="autocomplete screenshot" style="display: inline-block; vertical-align: top">
 </div>
 <br />
 
@@ -43,8 +43,8 @@ Some noteworthy features listed by objective:
  
 <br />
 <div style="white-space: nowrap">
-<img src="/images/2-omnitool/extension-lorem-history.png"  width="300" alt="todo" style="display: inline-block; vertical-align: top">
-<img src="/images/2-omnitool/extension-lorem-param.png"  width="300" alt="todo" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/extension-lorem-history.png"  width="300" alt="execution history screenshot" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/extension-lorem-param.png"  width="300" alt="lorem command screenshot" style="display: inline-block; vertical-align: top">
 </div>
 <br />
 
@@ -55,9 +55,9 @@ Some noteworthy features listed by objective:
 
 <br />
 <div style="white-space: nowrap">
-<img src="/images/2-omnitool/extension-links-pop.png"  width="250" alt="todo" style="display: inline-block; vertical-align: top">
-<img src="/images/2-omnitool/extension-color.png"  width="250" alt="todo" style="display: inline-block; vertical-align: top">
-<img src="/images/2-omnitool/extension-env-tab.png"  width="250" alt="todo" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/extension-links-pop.png"  width="250" alt="links tool screenshot" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/extension-color.png"  width="250" alt="color tool screenshot" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/extension-env-tab.png"  width="250" alt="pinned tool screenshot" style="display: inline-block; vertical-align: top">
 </div>
 <br />
 
@@ -65,17 +65,17 @@ The Omnitool 'demo-tools' branch includes tool samples that showcase these featu
 
 The tool development pattern is accessible to most web developers. A tool definition consists of a small package of files.
 
-<img src="/images/2-omnitool/tool-files.png"  width="225" alt="todo" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/tool-files.png"  width="225" alt="tool definition files screenshot" style="display: inline-block; vertical-align: top">
 <br />
 
 The tool logic and metadata is defined in a JS/TS module.
 
-<img src="/images/2-omnitool/tool-code.png"  width="450" alt="todo" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/tool-code.png"  width="450" alt="sample tool logic screenshot" style="display: inline-block; vertical-align: top">
 <br />
 
 The optional tool UI is defined in a linked Vue component.
 
-<img src="/images/2-omnitool/tool-pane.png"  width="450" alt="todo" style="display: inline-block; vertical-align: top">
+<img src="/images/2-omnitool/tool-pane.png"  width="450" alt="tool Vue component screenshot" style="display: inline-block; vertical-align: top">
 <br />
 <br />
 

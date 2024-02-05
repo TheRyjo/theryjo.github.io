@@ -1,6 +1,6 @@
 <!-- Credits - https://www.youtube.com/watch?v=W06u8rj1c2s -->
 <div class="glow-ball" style="margin: 0 auto;">
-    <a href="https://en.wikipedia.org/wiki/Ball_(disambiguation)" target="_blank"></a>
+    <a href="https://en.wikipedia.org/wiki/Ball_(disambiguation)" target="_blank" aria-label="mysterious glowing ball"></a>
 </div>
 
 <style webc:keep>

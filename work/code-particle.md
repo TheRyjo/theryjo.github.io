@@ -9,7 +9,7 @@ tags: ['professional', '.net', 'azure', 'scala']
 __Code Particle__ is an industry-leading development studio in Los Angeles, with expertise in mobile applications, websites, backend development, 3D, VR, and design.
 
 <a href="https://codeparticle.com/">
-<img src="/images/thumbnail/code-particle.png" alt="todo" style="margin: 0 auto">
+<img src="/images/thumbnail/code-particle.png" alt="Code Particle logo" style="margin: 0 auto">
 </a>
 
 <div style="display: flex; justify-content: center">
@@ -34,7 +34,7 @@ Contributions:
 <br />
 
 <a href="https://www.tenable.com/products/tenable-io">
-<img src="/images/work/code-particle/tenable-nessus.png" alt="todo" style="margin: 0 auto">
+<img src="/images/work/code-particle/tenable-nessus.png" alt="Tenable nessus screenshot" style="margin: 0 auto">
 </a>
 
 <br />
@@ -42,5 +42,5 @@ Contributions:
 <br />
 
 <a href="https://innovation.uci.edu/2019/02/startup-ink-makes-meaningful-connection-joins-the-veteran-founder-lab-program/">
-<img src="/images/work/code-particle/iNK-Logo.png" alt="todo" style="margin: 0 auto">
+<img src="/images/work/code-particle/iNK-Logo.png" alt="iNK logo" style="margin: 0 auto">
 </a>

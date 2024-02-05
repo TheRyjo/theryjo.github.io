@@ -23,7 +23,7 @@ Which brings me to...
 
 Monkeytype was created in 2020 as a single-developer passion project to make a minimalist, customizable online typing test. Since then it has grown rapidly, with <u>[365 million tests taken, an active Discord server, and hundreds of supporters and contributors](https://monkeytype.com/about)</u>.
 
-<img src="/images/3-fingermap/monkeytype-home.png"  width="600" alt="todo" style="">
+<img src="/images/3-fingermap/monkeytype-home.png"  width="600" alt="monkeytype app screenshot" style="">
 
 I've been a big fan of Monkeytype for my typing practice, with highest speeds to date being 135wpm over 15 seconds and 117wpm over 60 seconds (100% accuracy). When I saw that Monkeytype is <u>[open-source on Github](https://github.com/monkeytypegame)</u>, I saw a perfect opportunity to contribute.
 
@@ -33,22 +33,22 @@ In particular, I observed that the subproject <u>[Fingermap](https://github.com/
 - A lack of mobile layout/responsiveness.
 - An outdated / diverged style as compared to the main site.
 
-<img src="/images/3-fingermap/fm-old.png"  width= "600" alt="todo" style="">
+<img src="/images/3-fingermap/fm-old.png"  width= "600" alt="fingermap old screenshot" style="">
 
 I started by joining the Monkeytype Discord, creating an issue on the repo, forking, and working up a draft solution for keypress selection. I was updating this code as a fun exercise, so I wasn't concerned with negotiating the changes in advance with the project owner _Miodec_. I hypothesized that providing a hosted demo of the updates would offer a strong introduction and elicit a faster response.
 
-<img src="/images/3-fingermap/discord-msg.png"  width= "600" alt="todo" style="">
+<img src="/images/3-fingermap/discord-msg.png"  width= "600" alt="discord message screenshot" style="">
 
 The response was prompt and positive!
 
 _Miodec_ expressed interest in the update and suggested additional changes. Over the course of a week and with numerous iterations, updates addressing all items of interest were PR'd and merged to the main repo. 
 
-<img src="/images/3-fingermap/fm-new.png"  width="600" alt="todo" style="">
+<img src="/images/3-fingermap/fm-new.png"  width="600" alt="fingermap new screenshot" style="">
 
 <br />
 <br />
 
-<img src="/images/3-fingermap/fm-new-mobile.png"  width="300" alt="todo" style="">
+<img src="/images/3-fingermap/fm-new-mobile.png"  width="300" alt="fingermap mobile new screenshot" style="">
 
 Some noteworthy process and implementation points:
 

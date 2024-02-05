@@ -26,7 +26,8 @@
       webc:if="post.data.icon"
       class="post__icon"
       :href="post.url"
-    ><img :src="post.data.icon" style="max-width: 350px;image-rendering: pixelated"></a>
+      aria-label="post link"
+    ><img :src="post.data.icon" style="max-width: 350px;image-rendering: pixelated" alt="post icon"></a>
   </div>
 </div>
 <br />
@@ -48,7 +49,7 @@
   line-height: 1.5em;
 }
 .post__date {
-  color: #a2a2a2;
+  color: #666;
 }
 .post__desc {
   margin: 0 0 .5em 0;

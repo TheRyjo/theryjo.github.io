@@ -9,7 +9,7 @@ tags: ['professional', 'mavice', 'ford', 'aem', 'vue', 'featured']
 __Mavice LLC__ is a software development consultancy with offices in Los Angeles and Detroit. For over 10 years, Mavice has worked with Ford Motor Company through partner FordDirect to deliver and maintain a host of data-driven applications, components, and services.
 
 <a href="https://mavice.com/">
-<img src="/images/work/mavice/mavice-overachieve.png" alt="todo" style="margin: 0 auto">
+<img src="/images/work/mavice/mavice-overachieve.png" alt="Mavice slogan" style="margin: 0 auto">
 </a>
 
 Tenure:

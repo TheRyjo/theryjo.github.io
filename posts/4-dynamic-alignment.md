@@ -18,7 +18,7 @@ We love modern web standards. CSS3 APIs like Flexbox and Grid offer robust tools
 
 On entry to a client automotive pricing application, the user is presented with vehicle cards in a carousel.
 
-<img src="/images/work/dynamic-alignment-resizeobserver/card-carousel-1.png"  width="800" alt="todo" style="">
+<img src="/images/work/dynamic-alignment-resizeobserver/card-carousel-1.png"  width="800" alt="card carousel screenshot" style="">
 
 For some models, the cards are straightforward – names, pricing, images, marketing copy, disclaimers, etc. These cases more closely reflect the original design – a simple layout with alignment achieved with fixed heights, element positioning, and content restrictions.
 
@@ -26,7 +26,7 @@ Despite such cases, the underlying card components are dynamic and complex. Driv
 
 This complexity brings us to our problem – alignment. Without frequent design updates to keep pace with new features, the existing layout was stressed. Small content overflows or enablement of features would cause misalignment of adjacent card sections.
 
-<img src="/images/work/dynamic-alignment-resizeobserver/card-carousel-3.png"  width="800" alt="todo" style="">
+<img src="/images/work/dynamic-alignment-resizeobserver/card-carousel-3.png"  width="800" alt="card carousel misalignment screenshot" style="">
 
 As more models displayed alignment issues, it was clear a comprehensive fix was needed.
 
@@ -61,11 +61,11 @@ If we can measure the height of card sections, we can respond to size changes an
 
 This wrapper element has a dynamically injected spacer to align with its neighbors.
 
-<img src="/images/work/dynamic-alignment-resizeobserver/height-element.png" alt="todo" style="">
+<img src="/images/work/dynamic-alignment-resizeobserver/height-element.png" alt="" style="height element src screenshot">
 
 An example with spacer elements highlighted.
 
-<img src="/images/work/dynamic-alignment-resizeobserver/els-highlighted-1.png"  width="800" alt="todo" style="">
+<img src="/images/work/dynamic-alignment-resizeobserver/els-highlighted-1.png"  width="800" alt="highlighted height element screenshot" style="">
 
 ## Vue Directive
 
@@ -123,7 +123,7 @@ export default directive;
 
 This allowed card sections to be tagged with a height-sync directive and unique key. The following card template code indicates the ‘.marketing-message-wrapper’ section will be height synchronized across any card instances. (If multiple card sets are desired, a composite key with the card group may be used.)
 
-<img src="/images/work/dynamic-alignment-resizeobserver/height-sync-dir.png" alt="todo" style="">
+<img src="/images/work/dynamic-alignment-resizeobserver/height-sync-dir.png" alt="height-sync directive screenshot" style="">
 
 ## Alignment Demo
 
