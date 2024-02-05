@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <title></title>
-    {% capture css %}
-      {% include 'node_modules/normalize.css/normalize.css' %}
-      {% include 'styles.css' %}
-    {% endcapture %}
     <style>
+      {% capture css %}
+        {% include 'node_modules/normalize.css/normalize.css' %}
+        {% include 'styles.css' %}
+      {% endcapture %}
       {{ css | cssmin }}
     </style>
-    <link rel="stylesheet" href="/vendor/highlight-js/atom-one-dark.css">
-    <script src="/vendor/highlight-js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+    <link rel="icon" type="image/png" href="/icons/favicon.png">
+    <link rel="preload" as="font" href="/fonts/figtree-v1-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/figtree-v1-latin-600.woff2" crossorigin>
+    {% if highlight %}
+      <link rel="stylesheet" href="/vendor/highlight-js/atom-one-dark.css">
+      <script defer src="/vendor/highlight-js/highlight.min.js"></script>
+      <script defer src="/vendor/misc/my-highlight-all.js"></script>
+    {% endif %}
   </head>
   <body style="display: flex; flex-direction: column;">
     {% include '_header.html' %}

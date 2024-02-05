@@ -3,6 +3,7 @@ title: Card Alignment with ResizeObserver
 desc: 
 date: 2023-11-25
 tags: ['mavice', 'ford', 'vue', 'web apis']
+highlight: true
 ---
 <div style="text-align: center">
 (Cross-posted with permission from

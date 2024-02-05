@@ -2,6 +2,7 @@
 title: New Website
 date: 2023-11-12
 tags: ['first post', '11ty']
+highlight: true
 ---
 __It's HERE!__
 
