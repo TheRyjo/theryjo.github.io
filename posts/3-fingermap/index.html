@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <title></title>
+    <meta name="description" content="Ryjo (Ryan Jones) personal website">
+    <title>Ryjo Personal Site</title>
     <style>
       
       /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}@font-face{font-family:figtree;font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/figtree-v1-latin-regular.woff2')}@font-face{font-family:figtree;font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/figtree-v1-latin-600.woff2')}*,::after,::before{box-sizing:border-box}:not(hr){border:none}body,html{height:100%;min-height:100%}body{position:relative;font-family:Figtree,sans-serif;color:#222;text-rendering:optimizeLegibility;max-width:700px;margin:0 auto;padding:0 25px}main{max-width:768px}h1,h2{font-weight:600}a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}img{display:block;max-width:100%}sub,sup{line-height:0}pre{font-size:.9rem}.inline{display:inline}.text-center{text-align:center}.d-flex{display:flex}.justify-content-center{justify-content:center}.justify-content-between{justify-content:space-between}.align-items-center{align-items:center}.nav{list-style-type:none}.nav li{display:inline;margin:0 5px}.nav__link{color:inherit;text-decoration:none}.nav__link--current{text-decoration:underline}
@@ -73,7 +73,7 @@
 <p>Which brings me to...</p>
 <h4><u><b><a href="https://monkeytype.com/">MonkeyType</a></b></u></h4>
 <p>Monkeytype was created in 2020 as a single-developer passion project to make a minimalist, customizable online typing test. Since then it has grown rapidly, with <u><a href="https://monkeytype.com/about">365 million tests taken, an active Discord server, and hundreds of supporters and contributors</a></u>.</p>
-<img src="/images/3-fingermap/monkeytype-home.png"  width="600" alt="todo" style="">
+<img src="/images/3-fingermap/monkeytype-home.png"  width="600" alt="monkeytype app screenshot" style="">
 <p>I've been a big fan of Monkeytype for my typing practice, with highest speeds to date being 135wpm over 15 seconds and 117wpm over 60 seconds (100% accuracy). When I saw that Monkeytype is <u><a href="https://github.com/monkeytypegame">open-source on Github</a></u>, I saw a perfect opportunity to contribute.</p>
 <p>In particular, I observed that the subproject <u><a href="https://github.com/monkeytypegame/monkeytype-fingermap">Fingermap</a></u>, a keyboard finger map editor, exhibited multiple issues I would happily take on, including:</p>
 <ul>
@@ -81,15 +81,15 @@
 <li>A lack of mobile layout/responsiveness.</li>
 <li>An outdated / diverged style as compared to the main site.</li>
 </ul>
-<img src="/images/3-fingermap/fm-old.png"  width= "600" alt="todo" style="">
+<img src="/images/3-fingermap/fm-old.png"  width= "600" alt="fingermap old screenshot" style="">
 <p>I started by joining the Monkeytype Discord, creating an issue on the repo, forking, and working up a draft solution for keypress selection. I was updating this code as a fun exercise, so I wasn't concerned with negotiating the changes in advance with the project owner <em>Miodec</em>. I hypothesized that providing a hosted demo of the updates would offer a strong introduction and elicit a faster response.</p>
-<img src="/images/3-fingermap/discord-msg.png"  width= "600" alt="todo" style="">
+<img src="/images/3-fingermap/discord-msg.png"  width= "600" alt="discord message screenshot" style="">
 <p>The response was prompt and positive!</p>
 <p><em>Miodec</em> expressed interest in the update and suggested additional changes. Over the course of a week and with numerous iterations, updates addressing all items of interest were PR'd and merged to the main repo.</p>
-<img src="/images/3-fingermap/fm-new.png"  width="600" alt="todo" style="">
+<img src="/images/3-fingermap/fm-new.png"  width="600" alt="fingermap new screenshot" style="">
 <br />
 <br />
-<img src="/images/3-fingermap/fm-new-mobile.png"  width="300" alt="todo" style="">
+<img src="/images/3-fingermap/fm-new-mobile.png"  width="300" alt="fingermap mobile new screenshot" style="">
 <p>Some noteworthy process and implementation points:</p>
 <ul>
 <li><strong>Keypress selection</strong> required changing other shortcuts to remove conflicts. Previously, keys 1-10 had been used for finger selection. The shift key also had overlap as a modifier key, which I resolved with logic to differentiate between quick press (selection) and hold (modifier).</li>
@@ -106,15 +106,15 @@
 
     <footer
     class="d-flex justify-content-center align-items-center"
-    style="font-size: 1rem;color: #888;height: 110px;flex-shrink: 0;"
+    style="font-size: 1rem;color: #666;height: 110px;flex-shrink: 0;"
 >
     <div>
         <i>Ryan Jones</i>
         &nbsp;
         <<a href="https://www.linkedin.com/in/theryjo/" target="_blank" style="vertical-align: middle"
-        ><img class="inline" src="/icons/linkedin.svg" style="width:18px"></a>
+        ><img class="inline" src="/icons/linkedin.svg" style="width:18px" alt="linkedin logo" aria-label="linkedin"></a>
         <a href="https://github.com/theryjo" target="_blank" style="vertical-align: middle"
-        ><img class="inline" src="/icons/github.svg" style="width:18px"></a>>
+        ><img class="inline" src="/icons/github.svg" style="width:18px" alt="github logo" aria-label="github"></a>>
         &nbsp;
         ©2023
     </div>
